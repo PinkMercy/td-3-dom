@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="moins.png" alt="moins">
+    <span id="compteur">0</span>
+    <img src="plus.png" alt="plus">
+
+    <script>
+        /*var p1 = document.querySelectorAll('img');
+p1.addEventListener('click',changeTexte);
+
+        function changeTexte() {
+           x=0
+                x = x + 1
+
+                if (x == 10) {
+                    changeTexte()
+                }
+
+            return (x);
+        }*/
+        var bouttons = document.getElementsByTagName("img")
+        bouttons[0].addEventListener('click', moins);
+        bouttons[1].addEventListener('click', plus);
+
+        function moins() {
+            var p = document.getElementsByTagName("span")[0].textContent
+            if (p != 0) {
+                p -= 1
+            }
+            document.getElementById("compteur").textContent = p;
+
+        }
+        //text comntetnt taa3tik el blasa li feha 0
+        function plus() {
+            var p = document.getElementById("compteur").textContent
+            p = Number(p);
+            p += 1
+            p = p%10
+            document.getElementById("compteur").textContent = p;
+
+        }
+    </script>
+</body>
+
+</html>
