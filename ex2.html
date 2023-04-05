@@ -1,12 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
-    
+    <h1>Direction Générale</h1>
+    <section>
+        <div id="premier"> du texte du texte du texte du texte du texte
+            <ul>
+                <li>Iset Charguia.</li>
+                <li>Iset Nabeul.</li>
+                <li>Iset Sousse.</li>
+                <li>Iset Sfax.</li>
+            </ul>
+        </div>
+        <div id="second">du texte du texte du texte du texte du texte
+            <ul>
+                <li>Iset Gabès.</li>
+                <li>Iset Bizerte.</li>
+                <li>Iset Mahdia.</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        bout = document.getElementsByTagName("h1")[0]
+        bout.addEventListener("click", change_color)
+
+        function change_color() {
+            // console.log("dfsgjn")
+            bout.style.backgroundColor = " red"
+        }
+
+
+        clik = document.getElementsByTagName("li")[0]
+        clik.addEventListener("click", change_contenu)
+
+        function change_contenu() {
+            //  console.log("dfsgjn")
+            clik.textContent = "Iset Rades."
+            clik.style.fontStyle = "italic"
+        }
+    </script>
 </body>
-</html>
